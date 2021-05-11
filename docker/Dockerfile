@@ -17,5 +17,5 @@ RUN git clone --depth=1 --single-branch --branch patch-1 https://github.com/mmee
     git submodule update --init --progress --depth=1 && \
     mkdir build && \
     cd build && \
-    cmake .. -DWITH_DEEPSTREAM=true && \
+    cmake .. -DWITH_DEEPSTREAM=true -DTENSORRT_DIR=/usr/include/aarch64-linux-gnu && \
     make -j10
